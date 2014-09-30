@@ -18,6 +18,8 @@
 		67B7FC0519D7DBC5003C0F21 /* TweetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B7FC0419D7DBC5003C0F21 /* TweetsTableViewCell.swift */; };
 		67B7FC0819D8AC00003C0F21 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B7FC0719D8AC00003C0F21 /* User.swift */; };
 		67B7FC0C19D8B103003C0F21 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B7FC0B19D8B103003C0F21 /* Tweet.swift */; };
+		67B7FC0E19D923CE003C0F21 /* TweetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B7FC0D19D923CE003C0F21 /* TweetDetailViewController.swift */; };
+		67B7FC1019DA480F003C0F21 /* ComposeTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B7FC0F19DA480F003C0F21 /* ComposeTweetViewController.swift */; };
 		E8C9A016868047BB94EEB6E9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B61C12DB6CB486CAF7983C5 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 		67B7FC0419D7DBC5003C0F21 /* TweetsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsTableViewCell.swift; sourceTree = "<group>"; };
 		67B7FC0719D8AC00003C0F21 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		67B7FC0B19D8B103003C0F21 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		67B7FC0D19D923CE003C0F21 /* TweetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetDetailViewController.swift; sourceTree = "<group>"; };
+		67B7FC0F19DA480F003C0F21 /* ComposeTweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeTweetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				677F7FA919D7ACEC009FCEE8 /* Supporting Files */,
 				677F7FCB19D7AD1C009FCEE8 /* LoginViewController.swift */,
 				67B7FC0119D7DB1A003C0F21 /* TweetListViewController.swift */,
+				67B7FC0D19D923CE003C0F21 /* TweetDetailViewController.swift */,
+				67B7FC0F19DA480F003C0F21 /* ComposeTweetViewController.swift */,
 				677F7FCD19D7B0E7009FCEE8 /* twitter-Bridging-Header.h */,
 			);
 			path = twitter;
@@ -302,11 +308,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67B7FC1019DA480F003C0F21 /* ComposeTweetViewController.swift in Sources */,
 				67B7FC0219D7DB1A003C0F21 /* TweetListViewController.swift in Sources */,
 				67B7FC0819D8AC00003C0F21 /* User.swift in Sources */,
 				677F7FCC19D7AD1C009FCEE8 /* LoginViewController.swift in Sources */,
 				67B7FC0C19D8B103003C0F21 /* Tweet.swift in Sources */,
 				677F7FD519D7B1E0009FCEE8 /* TwitterClient.swift in Sources */,
+				67B7FC0E19D923CE003C0F21 /* TweetDetailViewController.swift in Sources */,
 				67B7FC0519D7DBC5003C0F21 /* TweetsTableViewCell.swift in Sources */,
 				677F7FAC19D7ACEC009FCEE8 /* AppDelegate.swift in Sources */,
 			);

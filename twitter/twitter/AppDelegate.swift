@@ -16,12 +16,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         println("checking user:\(User.currentUser)")
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "kushLogoutHandle", name: userLogoutNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "kushLogintHandle", name: userLogInNotification, object: nil)
         if User.currentUser != nil {
-            var vc = storyBoard.instantiateViewControllerWithIdentifier("TweetsViewController") as UIViewController
+            var vc = storyBoard.instantiateViewControllerWithIdentifier("TweetsNavigationController") as UINavigationController
             window?.rootViewController = vc
         }
         // Override point for customization after application launch.
         return true
+    }
+    
+    func kushLogoutHandle () {
+        var vc = storyBoard.instantiateViewControllerWithIdentifier("NavigationLoginController") as UINavigationController
+        window?.rootViewController = vc
+    }
+    
+    func kushLogintHandle () {
+        var vc = storyBoard.instantiateViewControllerWithIdentifier("TweetsNavigationController") as UINavigationController
+        window?.rootViewController = vc
     }
     
     func applicationWillResignActive(application: UIApplication) {

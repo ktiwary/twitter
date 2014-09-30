@@ -10,6 +10,8 @@ import Foundation
 
 var _currentUser: User?
 let userDatabasePersistentKey = "userDatabasePersistentKey"
+let userLogoutNotification = "userLoggedOut"
+let userLogInNotification = "userLoggedIn"
 
 class User: NSObject {
     
@@ -25,6 +27,17 @@ class User: NSObject {
         self.userScreenName = dictionary["screen_name"] as? String
         self.userImage = dictionary["profile_image_url"] as? String
         self.userTagLine = dictionary["description"] as? String
+    }
+    
+    class func logout() {
+        User.currentUser = nil
+        TwitterClient.sharedInstance.requestSerializer.removeAccessToken()
+        NSNotificationCenter.defaultCenter().postNotificationName(userLogoutNotification, object: nil)
+    }
+    
+    class func login(user: User) {
+        User.currentUser = user
+        NSNotificationCenter.defaultCenter().postNotificationName(userLogInNotification, object: nil)
     }
     
     class var currentUser: User? {

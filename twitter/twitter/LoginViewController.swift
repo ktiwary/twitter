@@ -27,9 +27,11 @@ class LoginViewController: UIViewController {
             (user: User?, error: NSError?) in
             if user != nil {
                 println("got user from closure: \(user?.userName)")
-                User.currentUser = user
-                self.performSegueWithIdentifier("TweetListViewSegue", sender: self)
+                User.login(user!)
+//                self.performSegueWithIdentifier("TweetListViewSegue", sender: self)
                 //perform segue
+            } else {
+                println(error?)
             }
         }
     }
