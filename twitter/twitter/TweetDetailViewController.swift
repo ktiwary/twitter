@@ -45,10 +45,13 @@ class TweetDetailViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if sender .isKindOfClass(UIBarButtonItem) {
-            var nav = segue.destinationViewController as UINavigationController
-            var composeTweetViewController = nav.viewControllers[0] as ComposeTweetViewController
-            composeTweetViewController.userName = User.currentUser?.userName
-            composeTweetViewController.imageUrl = User.currentUser?.userImage
+            var senderBarButton = sender as UIBarButtonItem
+            if senderBarButton.title == "Reply" {
+                var nav = segue.destinationViewController as UINavigationController
+                var composeTweetViewController = nav.viewControllers[0] as ComposeTweetViewController
+                composeTweetViewController.userName = User.currentUser?.userName
+                composeTweetViewController.imageUrl = User.currentUser?.userImage
+            }
         }
         
         // Get the new view controller using segue.destinationViewController.

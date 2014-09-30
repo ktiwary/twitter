@@ -266,7 +266,6 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Reply" id="G2n-yH-VFL">
                             <connections>
-                                <action selector="onLogout:" destination="5kc-iw-Mco" id="owO-1i-YbV"/>
                                 <segue destination="QNF-OM-BZN" kind="modal" id="NN8-C0-nSJ"/>
                             </connections>
                         </barButtonItem>
@@ -359,7 +358,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="je5-4K-mhf"/>
-        <segue reference="lrA-DX-12B"/>
+        <segue reference="RSR-YT-3U6"/>
+        <segue reference="NN8-C0-nSJ"/>
     </inferredMetricsTieBreakers>
 </document>

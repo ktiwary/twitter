@@ -24,6 +24,7 @@ class TwitterClient: BDBOAuth1RequestOperationManager {
     }
     
     func loginAndGetUser(completion: (user: User?, error: NSError?) -> Void) {
+        println("getting user info")
         self.completion = completion
         TwitterClient.sharedInstance.requestSerializer.removeAccessToken()
         TwitterClient.sharedInstance.fetchRequestTokenWithPath("oauth/request_token", method: "GET", callbackURL: NSURL(string: "traveangletwitterdemo://oauth"), scope: nil, success: { (requestToken: BDBOAuthToken!) -> Void in
