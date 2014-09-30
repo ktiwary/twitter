@@ -22,5 +22,5 @@ Completed user stories:
 * [] Optional: Replies should be prefixed with the username and the reply_id should be set when posting the tweet,
 * [] Optional: User can load more tweets once they reach the bottom of the feed using infinite loading similar to the actual Twitter client.
 
-![Video Walkthrough](/yelp.gif)
+![Video Walkthrough](/twitter.gif)
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
